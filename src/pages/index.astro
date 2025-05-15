@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+const siteTitle = "Pixelated Relics: Unearthing Retro Gaming's Gems";
+const siteDescription = "Discover forgotten treasures & hidden gems in old video games. Reviews, ROM hacks, and community forums for retro gaming enthusiasts!";
+---
+
+<Layout title={siteTitle} description={siteDescription}>
+	<section class="text-center">
+		<h1 class="text-4xl font-bold mb-4">{siteTitle}</h1>
+		<p class="text-lg mb-8">{siteDescription}</p>
+	</section>
+
+	<section class="mb-8">
+		<h2 class="text-2xl font-bold mb-4">Featured Reviews</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+			<div class="border border-retro-blue p-4 rounded-md">
+				<img src="https://placehold.co/400x200.png" alt="Game Screenshot" data-ai-hint="screenshot of an 8-bit platformer game" class="mb-2"/>
+				<h3 class="text-xl font-semibold">Game Title 1</h3>
+				<p>Brief review snippet...</p>
+				<a href="#" class="text-retro-yellow hover:text-white">Read More</a>
+			</div>
+			<div class="border border-retro-blue p-4 rounded-md">
+				<img src="https://placehold.co/400x200.png" alt="Game Screenshot" data-ai-hint="screenshot of an old RPG battle scene" class="mb-2"/>
+				<h3 class="text-xl font-semibold">Game Title 2</h3>
+				<p>Brief review snippet...</p>
+				<a href="#" class="text-retro-yellow hover:text-white">Read More</a>
+			</div>
+			<div class="border border-retro-blue p-4 rounded-md">
+				<img src="https://placehold.co/400x200.png" alt="Game Screenshot" data-ai-hint="screenshot of a retro space shooter game" class="mb-2"/>
+				<h3 class="text-xl font-semibold">Game Title 3</h3>
+				<p>Brief review snippet...</p>
+				<a href="#" class="text-retro-yellow hover:text-white">Read More</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="mb-8">
+		<h2 class="text-2xl font-bold mb-4">ROM Hacks</h2>
+		<p>Discover amazing fan-made ROM hacks for classic games. Explore new levels, characters, and storylines!</p>
+		<img src="https://placehold.co/800x400.png" alt="ROM Hack Image" data-ai-hint="screenshot from a Super Mario World ROM hack" class="mb-4"/>
+		<a href="#" class="text-retro-yellow hover:text-white">Explore ROM Hacks</a>
+	</section>
+
+	<section>
+		<h2 class="text-2xl font-bold mb-4">Lost & Found</h2>
+		<p>Do you remember a game but can't recall the name? Let's help each other find those obscure retro gems!</p>
+		<img src="https://placehold.co/800x400.png" alt="Lost Game" data-ai-hint="blurry screenshot of an unknown retro game" class="mb-4"/>
+		<a href="#" class="text-retro-yellow hover:text-white">Help Find a Game</a>
+	</section>
+</Layout>

@@ -1,0 +1,37 @@
+---
+title: "{Astro.props.title || `Pixelated Relics: Unearthing Retro Gaming's Gems`}"
+description: "{Astro.props.description}"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={Astro.props.description} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{Astro.props.title || `Pixelated Relics: Unearthing Retro Gaming's Gems`}</title>
+	</head>
+	<body class="bg-dark-gray text-white font-Press-Start-2P">
+		<header class="bg-retro-blue py-4">
+			<div class="container mx-auto flex justify-between items-center">
+				<a href="/" class="text-2xl hover:text-retro-yellow">Pixelated Relics</a>
+				<nav>
+					<ul class="flex space-x-4">
+						<li><a href="/" class="hover:text-retro-yellow">Home</a></li>
+						<li><a href="/blog" class="hover:text-retro-yellow">Blog</a></li>
+						<li><a href="#" class="hover:text-retro-yellow">Forums</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="container mx-auto py-8">
+			<slot />
+		</main>
+		<footer class="bg-retro-blue py-4 text-center">
+			<div class="container mx-auto">
+				© {new Date().getFullYear()} Pixelated Relics: Unearthing Retro Gaming's Gems
+			</div>
+		</footer>
+	</body>
+</html>

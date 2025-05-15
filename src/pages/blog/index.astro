@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = await Astro.glob('../../content/blog/*.md');
+---
+
+<Layout title="Blog" description="Articles about retro gaming.">
+	<main>
+		<h1 class="text-3xl font-bold mb-4">Blog</h1>
+		<ul>
+			{posts.map((post) => (
+				<li class="mb-4">
+					<a href={post.url} class="text-retro-yellow hover:text-white">
+						{post.frontmatter.title}
+					</a>
+					<p class="text-sm text-gray-500">Published: {new Date(post.frontmatter.pubDate).toLocaleDateString()}</p>
+					<p>{post.frontmatter.description}</p>
+				</li>
+			))}
+		</ul>
+	</main>
+</Layout>
